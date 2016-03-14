@@ -1,0 +1,85 @@
+.signup{
+    margin-top:60px;
+    position:relative;
+}
+
+footer{
+    position:relative;
+    bottom:0;
+}
+
+.cover{
+    background:#34495e;   
+}
+.main_cover{
+    width:600px;
+    height:400px;
+    margin:auto;
+    margin-top:200px;
+    position:relative;
+}
+.logo{
+    color:green;
+    text-align:center;
+}
+
+.box{
+    width:1150px;
+    border:2px solid #bdc3c7;
+    height:450px;
+    margin-top:10px;
+    padding:10px;
+    display: inline-block;
+    position:relative;
+    overflow:auto;
+}
+
+.menu{
+    width:300px;
+    height:430px;
+    border:1px solid #bdc3c7;
+    background: #bdc3c7;
+    position:fixed;
+    margin-left:0;
+    
+}
+
+.item{
+    border:2px solid #34495e;
+    background:white;
+    font-size:20px;
+    color:#34495e;
+    padding:10px;
+    display:block;
+    margin:20px 40px 10px 8px;
+}
+
+.item_active{
+    border:2px solid #34495e;
+    background:#34495e;
+    font-size:20px;
+    color:white;
+    padding:10px;
+    display:block;
+    margin:20px 40px 10px 8px;
+}
+
+.field{
+    margin-left:30px;
+    font-size:20px;
+    padding:40px;
+}
+
+.detail{
+    width:740px;
+    float:right;
+    margin-right:30px;
+}
+
+.item::after{
+    content:'\2713';
+    font-size:30px;
+    color:#34495e;
+    float:right;
+}
+

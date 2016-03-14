@@ -1,0 +1,55 @@
+{% extends "signup.html" %}
+{% load staticfiles %}
+
+{% block head %}
+ <script src="{% static 'js/signup.js' %}"></script>
+{% endblock head %}
+{% block content %}
+  <div class="signup">
+      <div class="container">
+           <h1>Lawyer SignUp Form</h1>
+          
+      <div class="box">
+          <div class="menu">
+             <ul class="menu_item">
+                 <div id="user_detail" class="item">User Detail</div>
+                 <div id="legal_info" class="item">Legal info </div>
+                 <div id="3" class="item">Basic Detail</div>
+                 <div id="4" class="item">Bar info</div>
+                 
+                     
+              </ul> 
+              <p class="field"><strong>*</strong>&nbsp;&nbsp;Required Fields </p>
+          </div>
+          
+          <div class="detail">
+                  <form action="" method="post">
+                      {% csrf_token %}
+                    {% for field in form.visible_fields %}
+                         <div class="form-group{% if field.errors %} has-error{% endif %}">
+                           <label for="{{ field.label }}">{{ field.label }}</label>
+                             {{ field }}
+                          {% if field.help_text %}
+                              <span class="help-block">{{ field.help_text|safe }}</span>
+                          {% endif %}
+                          {% for error in field.errors %}
+                          <label class="control-label">{{ error }}</label>
+                             {% endfor %}
+                      </div>      
+                       {% endfor %}
+                       <button type="submit" class="btn btn-info btn-lg">Save</button>                                                                    
+              </form>
+              </div>
+          </div>
+          
+      </div>
+      </div>
+            
+{% endblock %}
+    {% block main %}
+        <div class="detail">
+                <a id="back" href="/legal_info/" type="submit" class="btn btn-info btn-lg">Back</a>
+                 <a id="next" href="/bar_info/" type="submit" class="btn btn-warning btn-lg">Next</a>
+            </div>
+     
+     {% endblock main %}
